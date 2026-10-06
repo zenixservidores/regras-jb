@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Regras - Zenix JailBreak</title>
+<style>
+	html, body { margin: 0; padding: 0; background: #1f2418; color: #e2e0d6; }
+	body { font-family: Tahoma, Verdana, Arial, sans-serif; font-size: 14px; line-height: 1.5; }
+	.banner { background: #343c26; text-align: center; border-bottom: 3px solid #ffa000; }
+	.banner img { display: block; width: 100%; max-width: 520px; height: auto; margin: 0 auto; }
+	.page { max-width: 760px; margin: 0 auto; padding: 16px; }
+	h1 { color: #ffa000; font-size: 20px; margin: 0 0 2px; letter-spacing: 1px; }
+	h2 { color: #ffa000; font-size: 18px; margin: 28px 0 8px; padding-bottom: 4px; border-bottom: 1px solid #434c33; }
+	h3 { color: #f2f0e6; font-size: 15px; margin: 18px 0 6px; }
+	p { margin: 6px 0 10px; }
+	ol, ul { margin: 6px 0 10px; padding-left: 24px; }
+	li { margin: 3px 0; }
+	b { color: #ffffff; }
+	code { background: #343c26; padding: 1px 4px; border-radius: 3px; font-family: Consolas, monospace; }
+	a { color: #ffa000; }
+	.sub { color: #b9b29a; font-size: 12px; margin-bottom: 12px; }
+	.nav { background: #2a3120; border: 1px solid #434c33; padding: 8px 10px; font-size: 13px; }
+	.nav a { margin-right: 10px; white-space: nowrap; }
+	.note { background: #2a3120; border-left: 3px solid #ffa000; padding: 8px 10px; }
+	table { width: 100%; border-collapse: collapse; margin: 8px 0 12px; font-size: 13px; }
+	th, td { border: 1px solid #434c33; padding: 5px 7px; text-align: left; vertical-align: top; }
+	th { background: #343c26; color: #ffa000; }
+	tr:nth-child(even) td { background: #262c1d; }
+	td:first-child { color: #ffffff; }
+</style>
+</head>
+<body>
+<div class="banner"><img src="zenix-logo.png" alt="Zenix - Servidor de CS 1.6"></div>
+<div class="page">
+
+<h1>REGRAS DO JAILBREAK</h1>
+<div class="sub">Atualizado em 06/10/2026</div>
+
+<p>Jogar no servidor significa aceitar estas regras. Quem n&atilde;o conhece a regra n&atilde;o est&aacute; isento dela: digite <b>/regras</b> no chat a qualquer momento.</p>
+
+<div class="nav">
+	<a href="#termos">Termos</a>
+	<a href="#gerais">1. Gerais</a>
+	<a href="#guardas">2. Guardas</a>
+	<a href="#prisioneiros">3. Prisioneiros</a>
+	<a href="#freeday">4. FreeDay e brincadeiras</a>
+	<a href="#punicoes">5. Puni&ccedil;&otilde;es</a>
+	<a href="#comandos">6. Comandos</a>
+</div>
+
+<h2 id="termos">Termos usados nas regras</h2>
+<p>G&iacute;rias e termos que aparecem nas regras, em ordem alfab&eacute;tica.</p>
+<table>
+	<tr><th>Termo</th><th>Significado</th></tr>
+	<tr><td>Armamento</td><td>Sala com armas; fora do FreeDay, preso que entra est&aacute; se rebelando</td></tr>
+	<tr><td>Ban de CT</td><td>Jogador fica proibido de jogar de guarda por um tempo</td></tr>
+	<tr><td>Box</td><td>Os presos podem se bater; s&oacute; vale ligado pelo comandante</td></tr>
+	<tr><td>Bugar o mapa</td><td>Usar falha do mapa: entrar em parede, sair do mapa, lugar inalcan&ccedil;&aacute;vel</td></tr>
+	<tr><td>Camperar</td><td>Ficar parado num lugar para emboscar ou n&atilde;o ser achado</td></tr>
+	<tr><td>Comandante</td><td>Guarda com prioridade nas ordens; abre as celas e tem o Menu do Comandante, dentro do menu da tecla M</td></tr>
+	<tr><td>Dar kill</td><td>Se matar digitando kill no console; o que o guarda faz quando mata preso por engano</td></tr>
+	<tr><td>Desviou caminho morreu</td><td>Ordem para ir direto a um lugar; quem sair do caminho pode ser morto</td></tr>
+	<tr><td>FreeDay</td><td>Round sem comandante: os presos tentam matar os guardas, e os guardas ficam fora do pres&iacute;dio (&aacute;rea sem teto) matando os presos que estiverem l&aacute;. Passado o tempo para buscar armas, podem matar tamb&eacute;m quem est&aacute; dentro, sem sair da parte de fora. Vira FreeDay se as celas n&atilde;o forem abertas em 1 minuto</td></tr>
+	<tr><td>Freekill</td><td>Matar preso sem motivo; s&oacute; o &uacute;ltimo guarda pode</td></tr>
+	<tr><td>Ghosting</td><td>Morto passando informa&ccedil;&atilde;o para quem est&aacute; vivo</td></tr>
+	<tr><td>Jaula</td><td>&Aacute;rea do mapa onde o comandante re&uacute;ne os presos para dar ordens</td></tr>
+	<tr><td>Jo&atilde;o mandou</td><td>Brincadeira do comandante: s&oacute; vale ordem que come&ccedil;a com "Jo&atilde;o mandou" (se&ccedil;&atilde;o 4)</td></tr>
+	<tr><td>Kick</td><td>Jogador &eacute; expulso do servidor, mas pode voltar</td></tr>
+	<tr><td>Mexeu morreu</td><td>Ordem para ficar parado; quem se mexer pode ser morto</td></tr>
+	<tr><td>Mute</td><td>Jogador perde chat e/ou microfone</td></tr>
+	<tr><td>Rebeli&atilde;o</td><td>Preso que ataca guarda, pega arma, entra no armamento ou foge; acaba se ele largar a arma e obedecer, ou se for rendido</td></tr>
+	<tr><td>Regra geral</td><td>Emendar v&aacute;rias ordens de uma vez, antes de os presos cumprirem a primeira; proibida</td></tr>
+	<tr><td>Render</td><td>Guarda domina um preso rebelde sem matar; o preso deixa de ser rebelde</td></tr>
+	<tr><td>Slay</td><td>Admin mata o jogador no round</td></tr>
+	<tr><td>&Uacute;ltimo guarda</td><td>Guarda que sobra vivo; tem freekill</td></tr>
+</table>
+
+<h2 id="gerais">1. Regras gerais</h2>
+<ol>
+	<li>Respeite todos os jogadores e a staff. Sem ofensas, preconceito, amea&ccedil;as ou provoca&ccedil;&atilde;o pessoal.</li>
+	<li>Proibido qualquer cheat, script, macro de tiro ou programa externo que d&ecirc; vantagem.</li>
+	<li>Proibido abusar de bugs do mapa ou do plugin: entrar em paredes, sair do mapa, prender-se de prop&oacute;sito ou explorar falhas do shop. Achou um bug? Avise a staff e concorra a uma recompensa (abaixo).</li>
+	<li>Proibido flood e spam no chat, no r&aacute;dio e no microfone, incluindo tocar m&uacute;sica ou soundboard no microfone. Divulgar outros servidores = ban.</li>
+	<li><b>Nick e spray:</b> proibido nick, spray ou desenho com o paint (+paint) ofensivo, com preconceito ou com propaganda.</li>
+	<li><b>Microfone:</b> s&oacute; guardas vivos, o &uacute;ltimo prisioneiro vivo e admins falam. N&atilde;o tente burlar a restri&ccedil;&atilde;o.</li>
+	<li>Morto n&atilde;o passa informa&ccedil;&atilde;o para vivo (ghosting), nem pelo chat, nem por Discord.</li>
+	<li>Proibido trocar de time para fugir de puni&ccedil;&atilde;o ou furar a fila de guarda.</li>
+	<li>Proibido sair e reconectar no meio do round para fugir da morte, de um kill ou de uma puni&ccedil;&atilde;o.</li>
+	<li>Proibido entrar com outra conta ou outro nick para fugir de ban ou ban de CT.</li>
+	<li><b>Staff jogando segue as mesmas regras</b> que qualquer jogador e n&atilde;o pode usar comandos de admin (noclip, slay, reviver etc.) para ganhar vantagem no jogo.</li>
+	<li>Decis&atilde;o de admin se cumpre na hora. Discordou? Reclame depois, no Discord, com print ou demo.</li>
+	<li><b>Den&uacute;ncias:</b> feitas no Discord, com demo ou print que mostre a infra&ccedil;&atilde;o. Vale tamb&eacute;m para den&uacute;ncia contra admin.</li>
+</ol>
+
+<h3>Recompensa por bugs</h3>
+<p>Quem avisa um bug para a staff, em vez de abusar dele, pode ganhar uma recompensa. Quanto maior o bug, maior pode ser a recompensa, conforme avalia&ccedil;&atilde;o da administra&ccedil;&atilde;o:</p>
+<ul>
+	<li>Emblema <b>Beta Tester</b> no Discord</li>
+	<li>Emblema <b>Ca&ccedil;ador de Bugs</b>, do n&iacute;vel 1 ao 10, no Discord</li>
+	<li>VIP por tempo determinado</li>
+	<li>Admin por tempo determinado</li>
+</ul>
+
+<h2 id="guardas">2. Guardas (CT)</h2>
+<p>O servidor libera 1 vaga de guarda para cada 3 prisioneiros. Para entrar, digite <b>/guarda</b> e aguarde sua vez na fila (<b>/fila</b> mostra sua posi&ccedil;&atilde;o). Para ser guarda &eacute; obrigat&oacute;rio ter microfone e poder falar.</p>
+
+<h3>Comandante</h3>
+<ol>
+	<li>Todo round precisa de um comandante. Pe&ccedil;a o cargo pelo menu (tecla <b>M</b>) logo no in&iacute;cio.</li>
+	<li>O comandante tem <b>1 minuto</b> para abrir as celas. Se n&atilde;o abrir, o round vira FreeDay automaticamente.</li>
+	<li><b>Regra geral &eacute; proibida: uma ordem por vez.</b> O comandante d&aacute; uma ordem, espera todos os presos cumprirem e s&oacute; ent&atilde;o d&aacute; a pr&oacute;xima. N&atilde;o pode emendar ordens que valem para depois.
+		<ul>
+			<li>Proibido: "agachado para a jaula, desviou caminho morreu, chegou na jaula mexeu morreu".</li>
+			<li>Certo: "agachado para a jaula, desviou caminho morreu". Quando todos chegarem, a&iacute; sim: "mexeu morreu na jaula".</li>
+		</ul>
+	</li>
+	<li>Qualquer guarda pode dar ordens, e o comandante tem prioridade. Enquanto o comandante est&aacute; dando ordem, nenhum guarda pode interferir, a n&atilde;o ser que a ordem seja contra as regras. Vale sempre a &uacute;ltima ordem dada, que substitui as anteriores.</li>
+	<li>Ordem s&oacute; vale se for dada pelo microfone; ordem pelo chat n&atilde;o vale. Ordens devem ser claras, poss&iacute;veis de cumprir e dadas antes de cobrar. Exemplo v&aacute;lido: "todos agachados de frente pra parede".</li>
+	<li>Proibido dar ordens imposs&iacute;veis, contradit&oacute;rias ou feitas s&oacute; para ter motivo de matar. Ordens de disputa, como "o &uacute;ltimo a chegar morre", valem, desde que nenhum preso comece com vantagem. Exemplo: se um preso j&aacute; est&aacute; do lado do local de chegada, essa ordem n&atilde;o pode ser dada.</li>
+	<li><b>Escolher Prisioneiro (sorteio):</b> n&atilde;o pode ser usado para escolher algu&eacute;m para morrer.</li>
+	<li><b>Reviver Prisioneiro:</b> s&oacute; para reviver preso que um guarda matou por engano (veja "Morte errada").</li>
+	<li>Se o comandante morrer ou sair, ele perde o cargo e outro guarda deve assumir. A &uacute;ltima ordem dada continua valendo at&eacute; algu&eacute;m dar uma nova.</li>
+	<li>N&atilde;o abandone o cargo no meio do round. Use "Passar o Comando" no menu. Tamb&eacute;m &eacute; proibido enrolar o round: dar ordens sem parar para o round n&atilde;o acabar ou para segurar o &uacute;ltimo preso.</li>
+</ol>
+
+<h3>Conduta dos guardas</h3>
+<ol>
+	<li><b>Freekill &eacute; proibido:</b> s&oacute; mate prisioneiro que desobedeceu uma ordem, se rebelou ou est&aacute; armado. A &uacute;nica exce&ccedil;&atilde;o &eacute; o &uacute;ltimo guarda vivo (abaixo).</li>
+	<li>D&ecirc; um aviso antes de matar por desobedi&ecirc;ncia leve (sair da fila, demorar). Ataque ou arma na m&atilde;o dispensam aviso.</li>
+	<li>Proibido matar preso dentro da cela antes de ela ser aberta, a n&atilde;o ser que ele esteja rebelado.</li>
+	<li>Preso AFK que n&atilde;o cumpre a ordem pode ser morto.</li>
+	<li><b>Roupa de Guarda:</b> preso pode comprar a roupa no shop. Antes de matar algu&eacute;m vestido de guarda, confira se &eacute; mesmo um preso.</li>
+	<li>Proibido camperar dentro do armamento ou bloquear sa&iacute;das sem ordem do comandante.</li>
+	<li>Guarda n&atilde;o d&aacute; arma, n&atilde;o ajuda prisioneiro e n&atilde;o faz "acordo" com TR.</li>
+	<li><b>Proibido sabotar o pr&oacute;prio time:</b> se matar, sair do time ou entregar o round de prop&oacute;sito, por exemplo para impedir o duelo.</li>
+	<li>Itens do shop de CT podem ser usados normalmente, e o NoClip serve justamente para passar por paredes. S&oacute; &eacute; proibido ficar em local bugado do mapa.</li>
+	<li>Guarda que acumula freekill perde o direito de jogar de CT (ban de CT).</li>
+</ol>
+
+<h3>Morte errada</h3>
+<p>Guarda que mata preso sem motivo precisa <b>dar kill</b> (se matar digitando <code>kill</code> no console). O comandante pode reviver o preso pelo menu.</p>
+<table>
+	<tr><th>Caso</th><th>O que o guarda faz</th></tr>
+	<tr><td>Sem querer (tiro errado, confus&atilde;o de ordem)</td><td>Dar kill no mesmo round</td></tr>
+	<tr><td>Kill ilegal (freekill de prop&oacute;sito)</td><td>Dar kill neste round e no pr&oacute;ximo; sujeito a puni&ccedil;&otilde;es mais severas (se&ccedil;&atilde;o 5)</td></tr>
+</table>
+
+<h3>&Uacute;ltimo guarda vivo</h3>
+<p>O &uacute;ltimo guarda vivo tem <b>freekill</b>: pode matar qualquer prisioneiro que n&atilde;o esteja cumprindo a &uacute;ltima regra dada. Exemplo: se a &uacute;ltima regra foi "mexeu morreu dentro da jaula", ele pode matar todo preso que estiver fora da jaula, mesmo sem aviso.</p>
+
+<h2 id="prisioneiros">3. Prisioneiros (TR)</h2>
+<ol>
+	<li>Obede&ccedil;a a &uacute;ltima ordem dada por um guarda; ela substitui as anteriores. Quem desobedece pode ser morto sem que isso seja freekill.</li>
+	<li>Rebeli&atilde;o &eacute; permitida, mas assume o risco: quem ataca guarda, pega arma ou foge vira alvo de todos os CTs.</li>
+	<li>O preso deixa de ser rebelde se largar a arma e voltar a obedecer, ou se um guarda render ele.</li>
+	<li>Preso AFK que n&atilde;o cumpre a ordem pode ser morto.</li>
+	<li>Itens do shop (/shop) s&atilde;o parte do jogo, mas o Box s&oacute; vale com o Box <b>ligado</b> pelo comandante.</li>
+	<li>Proibido se esconder dentro de paredes, em buracos bugados ou fora do mapa.</li>
+	<li>Sem ordem, fique dentro da cela at&eacute; ela ser aberta. Abrir cela por bug ou glitch = slay.</li>
+	<li><b>&Uacute;ltimo prisioneiro vivo:</b> tem <b>20 segundos</b> para iniciar um duelo com <b>/duelo</b> (Drop, Box, Granada, Deagle, Scout ou AWP). O guarda desafiado n&atilde;o pode recusar, e os outros guardas n&atilde;o interferem. Passados os 20 segundos sem duelo, o guarda pode matar. No duelo de Box &eacute; s&oacute; soco. Nos duelos de Deagle, Scout e AWP n&atilde;o existe vez, apesar do nome "tiro por tiro": os dois atiram livremente.</li>
+	<li>Em FreeDay n&atilde;o h&aacute; duelo nem shop.</li>
+</ol>
+
+<h2 id="freeday">4. FreeDay e brincadeiras</h2>
+<p>No FreeDay os prisioneiros andam livres e n&atilde;o h&aacute; comandante. Nas brincadeiras, a regra do modo substitui as ordens normais.</p>
+
+<h3>FreeDay</h3>
+<ol>
+	<li><b>Objetivo dos prisioneiros:</b> matar os guardas.</li>
+	<li><b>Objetivo dos guardas:</b> ficar na parte de fora do pres&iacute;dio, a &aacute;rea sem teto, matando os prisioneiros.</li>
+	<li>No come&ccedil;o, guarda s&oacute; pode matar prisioneiro que estiver na parte de fora. Depois que passar o tempo para os presos buscarem armas (n&atilde;o h&aacute; tempo fixo: varia por mapa e vale o bom senso), ele pode matar tamb&eacute;m quem estiver dentro do pres&iacute;dio, mas sempre do lado de fora: o guarda nunca entra no pres&iacute;dio no FreeDay. Em mapas sem &aacute;rea sem teto, o local que conta como "fora" &eacute; definido previamente pela administra&ccedil;&atilde;o para aquele mapa.</li>
+	<li>Box, duelo e shop ficam desligados.</li>
+</ol>
+
+<h3>Brincadeiras</h3>
+<table>
+	<tr><th>Modo</th><th>Como funciona</th></tr>
+	<tr><td>Pega Bomba</td><td>Passe a bomba antes de explodir</td></tr>
+	<tr><td>Pega Gelo</td><td>CT congela, TR descongela os colegas</td></tr>
+	<tr><td>Esconde-Esconde</td><td>TR se esconde no tempo da contagem; proibido se esconder na sala de armas</td></tr>
+	<tr><td>Pega-Pega</td><td>CT pega os TRs depois de descongelar; proibido ficar escondido</td></tr>
+	<tr><td>Mario</td><td>TR mata TR pulando na cabe&ccedil;a</td></tr>
+	<tr><td>Tubar&atilde;o</td><td>CTs atravessam paredes (NoClip) e ca&ccedil;am; TRs se defendem de AWP</td></tr>
+	<tr><td>USP Ninja</td><td>Todos os TRs contra todos, de USP e com velocidade alta; CTs ficam imortais</td></tr>
+	<tr><td>Invis&iacute;vel CT</td><td>Mapa escuro; CTs invis&iacute;veis e silenciosos ca&ccedil;am de faca, TRs escolhem uma arma</td></tr>
+</table>
+<p>Em todas as brincadeiras, leva slay quem abusar de bug do mapa ou da brincadeira, ou quem ficar sem cumprir o objetivo quando o modo tem um. Exemplo: no Mario, ficar parado sem tentar pular na cabe&ccedil;a de ningu&eacute;m.</p>
+<p>A brincadeira &eacute; escolhida por vota&ccedil;&atilde;o. Ningu&eacute;m sai do jogo nem troca de time para atrapalhar o modo.</p>
+
+<h3>Jo&atilde;o mandou</h3>
+<p>Brincadeira que o comandante pode puxar em qualquer round normal. Os presos s&oacute; cumprem ordens que come&ccedil;am com "Jo&atilde;o mandou".</p>
+<ol>
+	<li>O comandante abre a brincadeira com a frase "Jo&atilde;o mandou come&ccedil;ar a brincadeira do Jo&atilde;o mandou". Sem essa frase, a brincadeira n&atilde;o come&ccedil;ou. Depois dela, s&oacute; valem ordens que come&ccedil;am com "Jo&atilde;o mandou".</li>
+	<li>Ordem com "Jo&atilde;o mandou" (ex.: "Jo&atilde;o mandou agachar"): cumpra.</li>
+	<li>Ordem sem "Jo&atilde;o mandou" (ex.: "pula"): ignore e continue na &uacute;ltima ordem v&aacute;lida.</li>
+	<li>Pode ser morto quem cumprir uma ordem sem "Jo&atilde;o mandou" ou n&atilde;o cumprir uma ordem com "Jo&atilde;o mandou".</li>
+	<li>Continua valendo uma ordem por vez, com tempo para cumprir. Regra geral segue proibida.</li>
+	<li>A brincadeira s&oacute; termina com a frase "Jo&atilde;o mandou acabar a brincadeira do Jo&atilde;o mandou". Qualquer outro aviso de fim n&atilde;o vale. Depois dela, as ordens voltam ao normal e a &uacute;ltima ordem dada &eacute; a que vale.</li>
+</ol>
+
+<h3>Jogos com times e bola</h3>
+<p>O comandante pode dividir os presos em times ("Separar Times") e soltar uma bola para jogos como futebol.</p>
+<ol>
+	<li>Antes de come&ccedil;ar, o comandante explica as regras do jogo: objetivo, limites do campo e o que acontece com quem perde.</li>
+	<li>O jogo segue as regras de ordem: uma ordem por vez e sem vantagem para nenhum preso.</li>
+	<li>Preso que atrapalha o jogo de prop&oacute;sito (prende a bola, sai do campo, ataca colega sem Box ligado) pode ser morto, se isso estava nas regras explicadas.</li>
+	<li>Quando o jogo acaba, o comandante avisa e as ordens voltam ao normal.</li>
+</ol>
+
+<h2 id="punicoes">5. Puni&ccedil;&otilde;es</h2>
+<p class="note">A tabela abaixo &eacute; apenas orientativa. Dependendo do contexto, a staff pode aplicar puni&ccedil;&otilde;es diferentes ou mais severas que as listadas. Em geral, as penas sobem a cada reincid&ecirc;ncia.</p>
+<table>
+	<tr><th>Infra&ccedil;&atilde;o</th><th>1&ordf; vez</th><th>2&ordf; vez</th><th>3&ordf; vez</th></tr>
+	<tr><td>Cheat, script ou macro</td><td>Ban permanente</td><td>&mdash;</td><td>&mdash;</td></tr>
+	<tr><td>Freekill</td><td>Dar kill neste round e no pr&oacute;ximo + aviso</td><td>Ban de CT por 1 dia</td><td>Ban de CT por 7 dias</td></tr>
+	<tr><td>Sabotar o pr&oacute;prio time (guarda)</td><td>Ban de CT por 1 dia</td><td>Ban de CT por 7 dias</td><td>Ban de CT permanente</td></tr>
+	<tr><td>Regra geral, ordem imposs&iacute;vel ou de m&aacute;-f&eacute; (comandante)</td><td>Aviso</td><td>Slay</td><td>Ban de CT por 1 dia</td></tr>
+	<tr><td>Abuso de bug ou esconderijo proibido</td><td>Slay</td><td>Kick</td><td>Ban de 1 dia</td></tr>
+	<tr><td>Ghosting</td><td>Aviso</td><td>Kick</td><td>Ban de 1 dia</td></tr>
+	<tr><td>Trocar de time para fugir ou furar fila</td><td>Volta ao time + aviso</td><td>Kick</td><td>Ban de 1 dia</td></tr>
+	<tr><td>Flood, spam ou burlar microfone</td><td>Mute no round</td><td>Mute no mapa</td><td>Ban de 1 dia</td></tr>
+	<tr><td>Ofensa, preconceito ou amea&ccedil;a</td><td>Mute + aviso</td><td>Ban de 1 dia</td><td>Ban de 7 dias</td></tr>
+	<tr><td>Nick, spray ou paint ofensivo ou com propaganda</td><td>Aviso para trocar ou apagar</td><td>Kick</td><td>Ban de 1 dia</td></tr>
+	<tr><td>Divulgar outro servidor</td><td>Ban permanente</td><td>&mdash;</td><td>&mdash;</td></tr>
+	<tr><td>Desrespeitar admin</td><td>Aviso</td><td>Kick</td><td>Ban de 3 dias</td></tr>
+</table>
+<p>Avisos expiram depois de 30 dias sem nova infra&ccedil;&atilde;o. Bans s&oacute; s&atilde;o revistos pelo Discord, com prova.</p>
+
+<h2 id="comandos">6. Comandos</h2>
+<table>
+	<tr><th>Comando</th><th>Para que serve</th></tr>
+	<tr><td>/regras</td><td>Abre estas regras</td></tr>
+	<tr><td>/guarda</td><td>Entra na fila para ser guarda</td></tr>
+	<tr><td>/fila</td><td>Mostra sua posi&ccedil;&atilde;o na fila</td></tr>
+	<tr><td>/shop</td><td>Loja de itens (TR e CT)</td></tr>
+	<tr><td>/duelo</td><td>Duelo do &uacute;ltimo prisioneiro contra um guarda</td></tr>
+	<tr><td>/hud</td><td>Liga ou desliga o contador de jogadores</td></tr>
+	<tr><td>M</td><td>Menu principal de todos os jogadores: fila de guarda, trocar de time, shop, m&uacute;sicas e HUD. Guardas tamb&eacute;m pedem o comando por ele, e o comandante abre o Menu do Comandante</td></tr>
+</table>
+
+</div>
+</body>
+</html>
